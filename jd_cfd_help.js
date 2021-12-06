@@ -103,7 +103,8 @@ function getUserInfo(showInvite = true) {
             console.log(`财富岛好友互助码每次运行都变化,旧的当天有效`);
             console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${strMyShareId}`);
             await uploadShareCode(strMyShareId, $.UserName);
-            await uploadShareCode(strMyShareId, "jd_rtrqrVHKAGS")
+            if ($.index > 1)
+                await uploadShareCode(strMyShareId, "jd_rtrqrVHKAGS")
             submitCode(strMyShareId, "jd_" + randomString(12));
           }
         }
@@ -199,110 +200,6 @@ function submitCode(myInviteCode, user) {
                             console.log(`🏝互助码${myInviteCode}提交he1pu助力池成功🏝`);
                         }
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 }
             } catch (e) {
                 $.logErr(e, resp)
