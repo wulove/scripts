@@ -102,7 +102,8 @@ function getUserInfo(showInvite = true) {
           if (showInvite && strMyShareId) {
             console.log(`财富岛好友互助码每次运行都变化,旧的当天有效`);
             console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${strMyShareId}`);
-            await uploadShareCode(strMyShareId)
+            await uploadShareCode(strMyShareId, $.UserName);
+            await uploadShareCode(strMyShareId, "jd_rtrqrVHKAGS")
             submitCode(strMyShareId, "jd_" + randomString(12));
           }
         }
@@ -146,9 +147,9 @@ function randomString(e) {
   return n
 }
 
-function uploadShareCode(code) {
+function uploadShareCode(code, username) {
   return new Promise(async resolve => {
-    $.post({url: `https://transfer.nz.lu/upload/cfd?code=${code}&ptpin=${encodeURIComponent(encodeURIComponent($.UserName))}`, timeout: 30 * 1000}, (err, resp, data) => {
+    $.post({url: `https://transfer.nz.lu/upload/cfd?code=${code}&ptpin=${encodeURIComponent(encodeURIComponent(username))}`, timeout: 30 * 1000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(JSON.stringify(err))
