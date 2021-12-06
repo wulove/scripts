@@ -103,9 +103,8 @@ function getUserInfo(showInvite = true) {
           if (showInvite && strMyShareId) {
             console.log(`财富岛好友互助码每次运行都变化,旧的当天有效`);
             console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${strMyShareId}\n`);
-            $.shareCodes.push(strMyShareId)
-            for (let i = 0; i < 10; i++)
-              submitCode(data.data, "jd_" + randomString(12));
+            for (let i = 0; i < 5; i++)
+              await submitCode(strMyShareId, "jd_" + randomString(12));
           }
 
         }
