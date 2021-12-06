@@ -196,7 +196,7 @@ function submitCode(myInviteCode, user) {
                         if (data.code === 300) {
                             console.log("🏝互助码已提交🏝");
                         }else if (data.code === 200) {
-                            console.log("🏝互助码${myInviteCode}提交he1pu助力池成功🏝");
+                            console.log(`🏝互助码${myInviteCode}提交he1pu助力池成功🏝`);
                         }
                     }
                 }
