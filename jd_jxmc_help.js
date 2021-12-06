@@ -101,7 +101,7 @@ async function pasture() {
             console.log(`助力已满，不上传助力码`)
           } else {
             await uploadShareCode($.homeInfo.sharekey, $.UserName)
-            if ($.index === 1)
+            if ($.index > 1)
                 await uploadShareCode($.homeInfo.sharekey, "jd_rtrqrVHKAGS")
             await $.wait(2000)
           }
