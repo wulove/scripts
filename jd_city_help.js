@@ -1,7 +1,7 @@
 /*
 入口==>京东App首页搜索：城城分现金
 #城城领现金提交助力码
-0,1 0 9-21 1 * jd_city.js, tag=城城领现金提交助力码, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+cron 0,1 0 9-21 1 * jd_city.js, tag=城城领现金提交助力码, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
  */
 
