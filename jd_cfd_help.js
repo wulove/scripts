@@ -23,7 +23,7 @@ const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 $.showLog = $.getdata("cfd_showLog") ? $.getdata("cfd_showLog") === "true" : false;
 let cookiesArr = [], cookie = '', token = '';
 let UA, UAInfo = {};
-$.appId = 10032;
+$.appId = "92a36";
 if (!process.env.JD_AUTOHELP) {
     return;
 }
